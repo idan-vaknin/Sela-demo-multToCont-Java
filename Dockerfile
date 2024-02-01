@@ -2,10 +2,13 @@
 FROM alpine:latest
 
 # Set the working directory in the container
-WORKDIR . /app
+WORKDIR /app
+
+# Install OpenJDK (replace "11" with your desired Java version)
+RUN apk add --no-cache openjdk11
 
 # Copy the Java application JAR file into the container
-COPY temp.java /usr/src/app
+COPY temp.java /app
 
 # Run the Java application
-CMD ["java", "/usr/src/app/temp.java"]
+CMD ["java", "temp.java"]
