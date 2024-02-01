@@ -2,10 +2,10 @@
 FROM alpine:latest
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR . /app
 
 # Copy the Java application JAR file into the container
-COPY temp.java /app
+COPY temp.java /usr/src/app
 
 # Run the Java application
-CMD ["java", "temp.java"]
+CMD ["java", "/usr/src/app/temp.java"]
