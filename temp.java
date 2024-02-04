@@ -1,4 +1,4 @@
-// for class presentation
+// class presentation
 public class Main
 {
 	public static void main(String[] args) {
